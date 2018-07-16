@@ -1,1 +1,4 @@
-DepenciesManage
+DependenciesManager
+
+npm install vis
+

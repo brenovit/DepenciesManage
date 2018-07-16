@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="node_modules/vis/dist/vis.js"></script>
+    <link href="node_modules/vis/dist/vis.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        #mynetwork {
+            width: 600px;
+            height: 400px;
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mynetwork"></div>
+
+    <script type="text/javascript">
+        // create an array with nodes
+        var aplicacoes = new vis.DataSet([
+            { id: "RMIAutorizationBCT", label: 'RMIAutorizationBCT\n001012654' },
+            { id: "IPOSBMOD003", label: 'IPOSBMOD003' },
+            { id: "WSFrete_Unik", label: 'WSFrete_Unik' },
+            { id: "APPWEBFACES", label: 'APPWEBFACES' },
+            { id: "EABatch", label: 'EABatch' },
+            { id: "WSFretePortal", label: 'WSFretePortal' }
+        ]);
+
+        // create an array with edges
+        var dependencias = new vis.DataSet([
+            { from: "RMIAutorizationBCT", to: "WSFrete_Unik", label: "00010123" },
+            { from: "RMIAutorizationBCT", to: "IPOSBMOD003", label: "00010123" },
+            { from: "IPOSBMOD003", to: "APPWEBFACES", label: "00010123" },
+            { from: "IPOSBMOD003", to: "WSFretePortal", label: "00010123" },
+            { from: "WSFrete_Unik", to: "RMIAutorizationBCT", label: "00010123" },
+            { from: "EABatch", to: "IPOSBMOD003", label: "00025487" },
+            { from: "IPOSBMOD003", to: "WSFretePortal", label: "00010123" }
+        ]);
+
+        // create a network
+        var container = document.getElementById('mynetwork');
+
+        // provide the data in the vis format
+        var data = {
+            nodes: aplicacoes,
+            edges: dependencias
+        };
+        var options = {
+            configure: {
+                enabled: false,
+                showButton: true,
+            },
+            nodes: {
+                shape: 'box',
+                font:{
+                    color: "#000000"
+                }
+            },
+            physics: {
+                enabled: false,
+            },
+            layout: {
+                hierarchical: {
+                    enabled: false,
+                }
+            },
+            interaction: {
+                dragNode: false,
+                dragView: true,
+            },
+            edges: {
+                arrows: {
+                    to: { enabled: true, scaleFactor: 1, type: 'arrow' }
+                },
+                arrowStrikethrough: true,
+                chosen: true,
+                color: {
+                    color: '#848484',
+                    highlight: '#848484',
+                    hover: '#848484',
+                    inherit: 'from',
+                    opacity: 1.0
+                },
+                dashes: false,
+                smooth: {
+                    enabled: false
+                },
+                font: {
+                    align: 'top'                    
+                },
+                hoverWidth: 3.0,
+            }
+        };
+
+        // initialize your network!
+        var network = new vis.Network(container, data, options);
+    </script>
+</body>
+
+</html>
