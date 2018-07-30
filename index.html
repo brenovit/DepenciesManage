@@ -6,8 +6,8 @@
 
     <style type="text/css">
         #mynetwork {
-            width: 600px;
-            height: 400px;
+            width: 800px;
+            height: 600px;
             border: 1px solid lightgray;
         }
     </style>
@@ -24,18 +24,33 @@
             { id: "WSFrete_Unik", label: 'WSFrete_Unik' },
             { id: "APPWEBFACES", label: 'APPWEBFACES' },
             { id: "EABatch", label: 'EABatch' },
-            { id: "WSFretePortal", label: 'WSFretePortal' }
+            { id: "WSFretePortal", label: 'WSFretePortal' },
+            { id: "ACID", label: 'ACID\n1.0.6' },
+            { id: "WSAntt", label: 'WSAntt' },
+            { id: "WebProxyClient", label: 'WebProxyClient' },
+            { id: "UtilANTT", label: 'UtilANTT' },
+            { id: "ICFBusiness", label: 'ICFBusiness' },
+            { id: "UtilBoleto", label: 'UtilBoleto' },
+            { id: "WSFCUNIKCAD", label: 'WSFCUNIKCAD' },
+            { id: "EAAtendimento", label: 'EAAtendimento' },
         ]);
 
         // create an array with edges
         var dependencias = new vis.DataSet([
-            { from: "RMIAutorizationBCT", to: "WSFrete_Unik", label: "00010123" },
             { from: "RMIAutorizationBCT", to: "IPOSBMOD003", label: "00010123" },
             { from: "IPOSBMOD003", to: "APPWEBFACES", label: "00010123" },
             { from: "IPOSBMOD003", to: "WSFretePortal", label: "00010123" },
             { from: "WSFrete_Unik", to: "RMIAutorizationBCT", label: "00010123" },
             { from: "EABatch", to: "IPOSBMOD003", label: "00025487" },
-            { from: "IPOSBMOD003", to: "WSFretePortal", label: "00010123" }
+            { from: "IPOSBMOD003", to: "WSFretePortal", label: "00010123" },
+            { from: "WSFretePortal", to: "WSFCUNIKCAD", label: "00" },
+            { from: "WSFretePortal", to: "WSAntt", label: "00" },
+            { from: "WSFretePortal", to: "WebProxyClient", label: "00" },
+            { from: "WSFretePortal", to: "EAAtendimento", label: "00" },
+            { from: "WSFretePortal", to: "UtilBoleto", label: "00" },
+            { from: "WSFretePortal", to: "ICFBusiness", label: "00" },
+            { from: "WSFretePortal", to: "UtilANTT", label: "00" },
+            { from: "WSFretePortal", to: "ACID", label: "00" },            
         ]);
 
         // create a network
@@ -58,16 +73,20 @@
                 }
             },
             physics: {
-                enabled: false,
+                enabled: true,
+                hierarchicalRepulsion: {
+                    nodeDistance: 200
+                }
             },
             layout: {
                 hierarchical: {
-                    enabled: false,
+                    enabled: true,
+                    levelSeparation: 150,
+                    nodeSpacing: 10,
+                    treeSpacing: 200,
+                    direction: 'LR',        // UD, DU, LR, RL
+                    sortMethod: 'directed'   // hubsize, directed
                 }
-            },
-            interaction: {
-                dragNode: false,
-                dragView: true,
             },
             edges: {
                 arrows: {
