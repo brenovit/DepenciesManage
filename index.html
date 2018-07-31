@@ -2,12 +2,12 @@
 
 <head>
     <script type="text/javascript" src="node_modules/vis/dist/vis.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="options.js"></script>
     <link href="node_modules/vis/dist/vis.css" rel="stylesheet" type="text/css" />
 
     <style type="text/css">
         #mynetwork {
-            width: 800px;
-            height: 600px;
             border: 1px solid lightgray;
         }
     </style>
@@ -17,101 +17,8 @@
     <div id="mynetwork"></div>
 
     <script type="text/javascript">
-        // create an array with nodes
-        var aplicacoes = new vis.DataSet([
-            { id: "RMIAutorizationBCT", label: 'RMIAutorizationBCT\n001012654' },
-            { id: "IPOSBMOD003", label: 'IPOSBMOD003' },
-            { id: "WSFrete_Unik", label: 'WSFrete_Unik' },
-            { id: "APPWEBFACES", label: 'APPWEBFACES' },
-            { id: "EABatch", label: 'EABatch' },
-            { id: "WSFretePortal", label: 'WSFretePortal' },
-            { id: "ACID", label: 'ACID\n1.0.6' },
-            { id: "WSAntt", label: 'WSAntt' },
-            { id: "WebProxyClient", label: 'WebProxyClient' },
-            { id: "UtilANTT", label: 'UtilANTT' },
-            { id: "ICFBusiness", label: 'ICFBusiness' },
-            { id: "UtilBoleto", label: 'UtilBoleto' },
-            { id: "WSFCUNIKCAD", label: 'WSFCUNIKCAD' },
-            { id: "EAAtendimento", label: 'EAAtendimento' },
-        ]);
-
-        // create an array with edges
-        var dependencias = new vis.DataSet([
-            { from: "RMIAutorizationBCT", to: "IPOSBMOD003", label: "00010123" },
-            { from: "IPOSBMOD003", to: "APPWEBFACES", label: "00010123" },
-            { from: "IPOSBMOD003", to: "WSFretePortal", label: "00010123" },
-            { from: "WSFrete_Unik", to: "RMIAutorizationBCT", label: "00010123" },
-            { from: "EABatch", to: "IPOSBMOD003", label: "00025487" },
-            { from: "IPOSBMOD003", to: "WSFretePortal", label: "00010123" },
-            { from: "WSFretePortal", to: "WSFCUNIKCAD", label: "00" },
-            { from: "WSFretePortal", to: "WSAntt", label: "00" },
-            { from: "WSFretePortal", to: "WebProxyClient", label: "00" },
-            { from: "WSFretePortal", to: "EAAtendimento", label: "00" },
-            { from: "WSFretePortal", to: "UtilBoleto", label: "00" },
-            { from: "WSFretePortal", to: "ICFBusiness", label: "00" },
-            { from: "WSFretePortal", to: "UtilANTT", label: "00" },
-            { from: "WSFretePortal", to: "ACID", label: "00" },            
-        ]);
-
         // create a network
         var container = document.getElementById('mynetwork');
-
-        // provide the data in the vis format
-        var data = {
-            nodes: aplicacoes,
-            edges: dependencias
-        };
-        var options = {
-            configure: {
-                enabled: false,
-                showButton: true,
-            },
-            nodes: {
-                shape: 'box',
-                font:{
-                    color: "#000000"
-                }
-            },
-            physics: {
-                enabled: true,
-                hierarchicalRepulsion: {
-                    nodeDistance: 200
-                }
-            },
-            layout: {
-                hierarchical: {
-                    enabled: true,
-                    levelSeparation: 150,
-                    nodeSpacing: 10,
-                    treeSpacing: 200,
-                    direction: 'LR',        // UD, DU, LR, RL
-                    sortMethod: 'directed'   // hubsize, directed
-                }
-            },
-            edges: {
-                arrows: {
-                    to: { enabled: true, scaleFactor: 1, type: 'arrow' }
-                },
-                arrowStrikethrough: true,
-                chosen: true,
-                color: {
-                    color: '#848484',
-                    highlight: '#848484',
-                    hover: '#848484',
-                    inherit: 'from',
-                    opacity: 1.0
-                },
-                dashes: false,
-                smooth: {
-                    enabled: false
-                },
-                font: {
-                    align: 'top'                    
-                },
-                hoverWidth: 3.0,
-            }
-        };
-
         // initialize your network!
         var network = new vis.Network(container, data, options);
     </script>
