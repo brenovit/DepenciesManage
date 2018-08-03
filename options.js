@@ -1,4 +1,4 @@
-var options = {
+let options = {
   configure: {
     enabled: false,
     showButton: true

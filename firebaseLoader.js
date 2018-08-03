@@ -1,13 +1,9 @@
+// Initialize Firebase
 
 
 firebase.initializeApp(config);
 
-const dbRef = firebase.database().ref();
-
-let appRef = dbRef.child('aplicacoes');
-let depRef = dbRef.child('dependencies');
-
-let appLitsUI
+let database = firebase.database().ref();
 
 function writeAplicacoes(id, label) {
   firebase
