@@ -58,7 +58,9 @@ let options = {
     },
     dashes: false,
     smooth: {
-      enabled: false
+      enabled: true,
+      type: "curvedCW",
+      forcedDirection: "none"
     },
     font: {
       align: "top"

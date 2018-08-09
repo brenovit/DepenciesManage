@@ -1,6 +1,19 @@
 {
   "aplicacoes": [
-    { "id": "ACID", "label": "ACID\n1.0.6" },
+    { "id": "ACID", "label": "ACID\n1.0.6",  
+      "color": {
+      "background": "#F03967",
+      "border": "#713E7F",
+        "highlight": {
+          "backgroung": "red",
+          "border": "blue"
+        },
+        "hover": {
+          "background": "white",
+          "border": "red"
+        }
+      }
+    },
     { "id": "APPGUIMENU", "label": "APPGUIMENU" },
     { "id": "APPWEBFACES", "label": "APPWEBFACES" },
     { "id": "EAAtendimento", "label": "EAAtendimento-EJB" },
@@ -28,9 +41,12 @@
     { "id": "WebPef", "label": "WebPef" },
     { "id": "WebProxyClient", "label": "WebProxyClient" },
     { "id": "FretePortalCli", "label": "FretePortal-CLI" },
-    { "id": "ArarasCli", "label": "Araras-CLI" }
+    { "id": "ArarasCli", "label": "Araras-CLI" },
+    { "id": "WSPedagio", "label": "WSPedagio" },
+    { "id": "Valepedagio", "label": "Valepedagio" },
+    { "id": "WSPedagioPortal", "label": "WSPedagioPortal" }
   ],
-  "dependencies": [
+  "relacionamentos": [
     { "from": "APPGUIMENU", "to": "EAAtendimento", "label": "" },
     { "from": "APPGUIMENU", "to": "FCCargoAtendRMI", "label": "" },
     { "from": "APPGUIMENU", "to": "Util", "label": "" },
@@ -96,6 +112,8 @@
     { "from": "WebLoginPef", "to": "Util", "label": "" },
     { "from": "WebPef", "to": "Util", "label": "" },
     { "from": "WebPef", "to": "UtilANTT", "label": "" },
-    { "from": "WebPef", "to": "WSAntt", "label": "" }
+    { "from": "WebPef", "to": "WSAntt", "label": "" },
+    { "from": "WSPedagio", "to": "Valepedagio",  "label": ""}
+  }
   ]
 }

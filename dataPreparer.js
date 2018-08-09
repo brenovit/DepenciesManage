@@ -14,7 +14,7 @@ depRef.on("child_added", snap => {
 });
 //*/
 let aplicacoes = new vis.DataSet(options);
-let dependencias = new vis.DataSet(options);
+let relacionamentos = new vis.DataSet(options);
 
 axios.get('https://dependencies-manager.firebaseio.com/aplicacoes.json').then(resp => {
     console.log(resp.data);
@@ -25,11 +25,11 @@ axios.get('https://dependencies-manager.firebaseio.com/aplicacoes.json').then(re
 axios.get('https://dependencies-manager.firebaseio.com/dependencies.json').then(resp => {
     console.log(resp.data);
     var data = resp.data;
-    dependencias.add(data);
+    relacionamentos.add(data);
 });
 
 // provide the data in the vis format
 var data = {
   nodes: aplicacoes,
-  edges: dependencias
+  edges: relacionamentos
 };

@@ -3,7 +3,7 @@
 
 firebase.initializeApp(config);
 
-let database = firebase.database().ref();
+const database = firebase.database().ref();
 
 function writeAplicacoes(id, label) {
   firebase
