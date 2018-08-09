@@ -13,17 +13,16 @@ depRef.on("child_added", snap => {
     dependencias.add(dep);
 });
 //*/
+
 let aplicacoes = new vis.DataSet(options);
 let relacionamentos = new vis.DataSet(options);
 
 axios.get('https://dependencies-manager.firebaseio.com/aplicacoes.json').then(resp => {
-    console.log(resp.data);
     var data = resp.data;
     aplicacoes.add(data);
 });
 
 axios.get('https://dependencies-manager.firebaseio.com/dependencies.json').then(resp => {
-    console.log(resp.data);
     var data = resp.data;
     relacionamentos.add(data);
 });
