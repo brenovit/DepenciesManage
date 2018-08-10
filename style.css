@@ -1,0 +1,83 @@
+/*li{
+    display: inline;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 2px solid #262626;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+}*/
+
+li {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;    
+    padding: 10px;
+    display: inline;
+    overflow: hidden;
+    border: none;
+    font: normal normal bold 19px/1 "Courier New", Courier, monospace;
+    color: rgba(0,0,0,1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    border-radius: 15px;
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3);
+  }
+
+li.tomcat{
+    background: #FF9800;
+}
+li.tomcat:hover{
+    background: #F57C00;
+}
+li.tomcat:active{
+    background: #E65100;
+}
+li.glassfish{
+    background: #03A9F4;
+} 
+li.glassfish:hover{
+    background: #0288D1;
+}
+li.glassfish:active{
+    background: #01579B;
+}
+li.socketrmi{
+    background: #f44336;
+}
+li.socketrmi:hover{
+    background: #d32f2f;
+}
+li.socketrmi:active{
+    background: #b71c1c;
+}
+li.desktop{
+    background: #8BC34A;
+}
+li.desktop:hover{
+    background: #689F38;
+}
+li.desktop:active{
+    background: #33691E;
+}
+li.dependencie{
+    background: #607D8B;
+} 
+li.dependencie:hover{
+    background: #455A64;
+}
+li.dependencie:active{
+    background: #263238;
+}
+li.undefined{
+    background: #BDBDBD;
+} 
+li.undefined:hover{
+    background: #9E9E9E;
+}
+li.undefined:active{
+    background: #757575;
+}

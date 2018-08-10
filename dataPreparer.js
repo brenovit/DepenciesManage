@@ -14,21 +14,21 @@ depRef.on("child_added", snap => {
 });
 //*/
 
-let aplicacoes = new vis.DataSet(options);
-let relacionamentos = new vis.DataSet(options);
-
+let nodes = new vis.DataSet(aplicacoes, options);
+let edges = new vis.DataSet(relacionamentos, options);
+/*
 axios.get('https://dependencies-manager.firebaseio.com/aplicacoes.json').then(resp => {
     var data = resp.data;
-    aplicacoes.add(data);
+    nodes.add(data);
 });
 
 axios.get('https://dependencies-manager.firebaseio.com/dependencies.json').then(resp => {
     var data = resp.data;
-    relacionamentos.add(data);
+    edges.add(data);
 });
-
+*/
 // provide the data in the vis format
 var data = {
-  nodes: aplicacoes,
-  edges: relacionamentos
+  nodes: nodes,
+  edges: edges
 };

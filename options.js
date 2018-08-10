@@ -12,17 +12,7 @@ let options = {
     },
     color: {
       border: "#000000",
-      background: "#f7786b",
-      highlight: {
-        //cor selecionado
-        border: "#d96459",
-        background: "#ff6f69"
-      },
-      hover: {
-        //cor com mouse em cima
-        border: "#c83349",
-        background: "#e06377"
-      }
+      background: "#f7786b"      
     },
     size: 50,
     labelHighlightBold: true
@@ -50,9 +40,9 @@ let options = {
     arrowStrikethrough: true,
     chosen: true,
     color: {
-      color: "#101010",
-      highlight: "#010101",
-      hover: "#151515",
+      color: "#737373",
+      highlight: "#000000",
+      hover: "#595959",
       inherit: "from",
       opacity: 1.0
     },
@@ -60,7 +50,7 @@ let options = {
     smooth: {
       enabled: true,
       type: "curvedCW",
-      forcedDirection: "none"
+      forceDirection: "none"
     },
     font: {
       align: "top"
