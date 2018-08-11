@@ -12,10 +12,17 @@ let options = {
     },
     color: {
       border: "#000000",
-      background: "#f7786b"      
+      background: "#f7786b"
     },
     size: 50,
-    labelHighlightBold: true
+    labelHighlightBold: true,
+    widthConstraint: {
+      minimum: 350
+    },
+    heightConstraint: {
+      minimum: 100,
+      valign: "center"
+    }
   },
   physics: {
     enabled: true,
