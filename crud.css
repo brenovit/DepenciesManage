@@ -14,7 +14,7 @@ h1 {
 }
 
 /*---------------------------*/
-/* Read Users */
+/* Read Apps */
 /*---------------------------*/
 #apps-list {
   margin: 0;
@@ -52,4 +52,28 @@ h1 {
   padding: 10px;
   border: 1px solid #4fc3fc;
   color: white;
+}
+
+/*---------------------------*/
+/* Edit Apps */
+/*---------------------------*/
+#edit-app-module {
+  display: none;
+  position: absolute;
+  background-color: #e1e1e1;
+  border: 1px solid #999;
+  top: 149px;
+  left: 160px;
+  padding: 10px;
+  width: 150px;
+}
+#apps-list li:hover ~ #edit-app-module {
+  display: none;
+}
+#edit-app-module form button {
+  background: #54bb7d;
+  font-size: 1em;
+  padding: 0px 10px;
+  color: white;
+  margin-top: 10px;
 }
