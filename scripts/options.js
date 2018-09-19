@@ -65,7 +65,7 @@ let options = {
     hoverWidth: 1.1
   },
   interaction: {
-    dragNodes: false,
+    dragNodes: true,
     dragView: true,
     hideEdgesOnDrag: false,
     hideNodesOnDrag: false,
@@ -76,7 +76,7 @@ let options = {
       speed: { x: 10, y: 10, zoom: 0.02 },
       bindToWindow: true
     },
-    multiselect: false,
+    multiselect: true,
     navigationButtons: true,
     selectable: true,
     selectConnectedEdges: true,

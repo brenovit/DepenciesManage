@@ -137,7 +137,6 @@ let relacionamentos = [
   { from: "APPGUIMENU", to: "EAAtendimento", label: "" },
   { from: "APPGUIMENU", to: "FCCargoAtendRMI", label: "" },
   { from: "APPGUIMENU", to: "Util", label: "" },
-  { from: "APPGUIMENU", to: "UtilANTT", label: "" },
   { from: "APPGUIMENU", to: "WSFCUNIKCAD", label: "" },
   { from: "APPWEBFACES", to: "FretePortalCli", label: "" },
   { from: "APPWEBFACES", to: "ArarasCli", label: "" },
