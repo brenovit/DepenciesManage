@@ -18,7 +18,7 @@ Install the module simple-autoreload-server
 
 Run the follows command inside of project folder
 
-> autoreload-server -w "**/**.{html,css,js}" -t ./ -p 8081 -b
+> autoreload-server -w "**/**.{html,css,js}" -t ./ -p 8080 -b
 
 Select the file 'index.html' on page start up
 
@@ -33,3 +33,9 @@ Than, configure a package.json
 Ends initializing ESLint and configure its
 
 > eslint --init
+
+Run Node server
+
+> node server.js
+
+Access http://localhost:8080/index.html
