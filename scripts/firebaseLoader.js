@@ -4,5 +4,5 @@ var config = {};
 firebase.initializeApp(config);
 
 const database = firebase.database().ref();
-const appsRef = database.child("aplicacoes");
-const relsRef = database.child("relacionamentos");
+const dataRef = database.child("data");
+const appsRef = database.child("data/nodes");

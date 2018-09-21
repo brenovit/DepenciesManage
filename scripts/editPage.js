@@ -4,13 +4,10 @@ readAppsData();
 
 function readAppsData() {
   const appsListUI = document.getElementById("apps-list");
-
-  appsRef.on("value", apps => {
-    appsListUI.innerHTML = "";
-    apps.forEach(nodeApp => {
-      let key = nodeApp.key;
-      let app = nodeApp.val();
-
+  appsRef.on("value", data => {
+    data.forEach(node => {
+      let key = node.key;
+      let app = node.val();
       let $li = document.createElement("li");
 
       let editIconUI = document.createElement("span");
@@ -82,7 +79,7 @@ function closeAppBtnEdit() {
 function userClicked(e) {
   var appId = e.target.getAttribute("app-key");
 
-  const appRef = database.child("aplicacoes/" + appId);
+  const appRef = database.child("data/nodes/" + appId);
   const appDetaillUI = document.getElementById("app-detail");
 
   appRef.on("value", nodeApp => {

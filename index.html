@@ -9,10 +9,9 @@
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <!-- script type="text/javascript" src="firebaseLoader.js"></script -->
+    <script type="text/javascript" src="scripts/firebaseLoader.js"></script>
     <script type="text/javascript" src="scripts/options.js"></script>
     <script type="text/javascript" src="scripts/data.js"></script>
-    <script type="text/javascript" src="scripts/dataPreparer.js"></script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -40,12 +39,8 @@
         </ul>
     </div>
     <div id="mynetwork"></div>
-    <script type="text/javascript">
-        // create a network
-        var container = document.getElementById('mynetwork');
-        // initialize your network!
-        var network = new vis.Network(container, data, options);
-    </script>
+
+    <script type="text/javascript" src="scripts/loadData.js"></script>
 </body>
 
 </html>
