@@ -12,13 +12,12 @@ function prepareData(data) {
 
 function fillVisNetwork(data) {
   let newData = prepareData(data);
-  console.log(newData);
   var container = document.getElementById("mynetwork");
   var network = new vis.Network(container, newData, options);
 }
 
 function getData(callbackIN) {
-  dataRef.once("value").then(snap => {
+  dataRef.on("value", snap => {
     callbackIN(snap.val());
   });
 }

@@ -4,7 +4,7 @@ readAppsData();
 
 function readAppsData() {
   const appsListUI = document.getElementById("apps-list");
-  appsRef.on("value", data => {
+  getNodes().on("value", data => {
     data.forEach(node => {
       let key = node.key;
       let app = node.val();
@@ -32,7 +32,7 @@ function editButtonClicked(e) {
   document.getElementById("edit-app-module").style.display = "inline";
   document.querySelector(".edit-appid").value = appId;
 
-  const appRef = database.child("aplicacoes/" + appId);
+  const appRef = getApp(appId);
 
   const editAppInputsUI = document.querySelectorAll(".edit-app-input");
 
@@ -52,7 +52,7 @@ function editButtonClicked(e) {
 
 function saveAppBtnClicked(e) {
   const appId = document.querySelector(".edit-appid").value;
-  const appRef = database.child("aplicacoes/" + appId);
+  const appRef = getApp(appId);
 
   var editedAppObject = {};
 
@@ -79,7 +79,7 @@ function closeAppBtnEdit() {
 function userClicked(e) {
   var appId = e.target.getAttribute("app-key");
 
-  const appRef = database.child("data/nodes/" + appId);
+  const appRef = getApp(appId);
   const appDetaillUI = document.getElementById("app-detail");
 
   appRef.on("value", nodeApp => {
