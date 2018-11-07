@@ -34,15 +34,16 @@ let options = {
     hierarchical: {
       enabled: true,
       levelSeparation: 500,
-      nodeSpacing: 100,
-      treeSpacing: 200,
+      nodeSpacing: 50,
+      treeSpacing: 50,
       direction: "LR", // UD, DU, LR, RL
-      sortMethod: "directed" // hubsize, directed
+      sortMethod: "hubsize" // hubsize, directed
     }
   },
   edges: {
     arrows: {
-      to: { enabled: true, scaleFactor: 1, type: "arrow" }
+      to: { enabled: true, scaleFactor: 1, type: "arrow" },
+      from: { enabled: true, scaleFactor: 1, type: "bar" },
     },
     arrowStrikethrough: true,
     chosen: true,
@@ -60,7 +61,10 @@ let options = {
       forceDirection: "none"
     },
     font: {
-      align: "top"
+      align: "top",
+      size: 30,
+      strokeWidth: 2,
+      strokeColor: "#000000"
     },
     hoverWidth: 1.1
   },
