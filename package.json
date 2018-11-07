@@ -4,7 +4,6 @@
   "description": "App to load Wex App from Frete scnario and show their relationship",
   "main": "app.js",
   "dependencies": {
-    "axios": "^0.18.0",
     "vis": "^4.21.0"
   },
   "devDependencies": {},
@@ -16,7 +15,6 @@
     "url": "git+https://github.com/brenovit/DependenciesManager.git"
   },
   "keywords": [
-    "axios",
     "dependency",
     "manager",
     "visjs",
