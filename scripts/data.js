@@ -72,66 +72,38 @@ const colorUndefined = {
 };
 
 let aplicacoes = [
-  { id: "ACID", label: "ACID\n1.0.6", color: colorDependencies, font: {} },
-  { id: "APPGUIMENU", label: "APPGUIMENU", color: colorDesktop },
-  { id: "APPWEBFACES", label: "APPWEBFACES", color: colorTomcat },
-  { id: "EAAtendimento", label: "EAAtendimento-EJB", color: colorGlassfish },
-  { id: "EABatch", label: "EABatch", color: colorGlassfish },
-  {
-    id: "FCCargoAtendRMI",
-    label: "FCCargoAtendRMI\n0010203",
-    color: colorSocketRmi
-  },
-  { id: "ICFBMODRMI", label: "ICFBMODRMI\n0010502", color: colorSocketRmi },
-  { id: "ICFBusiness", label: "ICFBusiness\n0011004", color: colorSocketRmi },
-  {
-    id: "ICFBusinessRMIServer",
-    label: "ICFBusinessRMIServer\n0010602",
-    color: colorSocketRmi
-  },
-  { id: "IPOSBMOD003", label: "IPOSBMOD003", color: colorSocketRmi },
-  {
-    id: "InterfaceOracle",
-    label: "InterfaceOracle\n0010301",
-    color: colorDependencies
-  },
-  {
-    id: "InterfaceXML",
-    label: "InterfaceXML\n1.0.0",
-    color: colorDependencies
-  },
-  { id: "POSBrowserTP", label: "POSBrowserTP", color: colorGlassfish },
-  { id: "POSBrowserWeb", label: "POSBrowserWeb", color: colorGlassfish },
-  {
-    id: "RMIAutorizationBCT",
-    label: "RMIAutorizationBCT\n001012654",
-    color: colorSocketRmi
-  },
-  { id: "ServerPefAntt", label: "ServerPefAntt", color: colorSocketRmi },
+  { id: "ACID", label: "ACID\n1.0.7", color: colorDependencies, font: {} },
+  { id: "APPGUIMENU", label: "APPGUIMENU\n0010807\nbr.com.rtkomp", color: colorDesktop },
+  { id: "APPWEBFACES", label: "APPWEBFACES\n0010101\nbr.com.rtkomp", color: colorTomcat },
+  { id: "EAAtendimento", label: "EAAtendimento-EJB\n0010808\nbr.com.rtkomp", color: colorGlassfish },
+  { id: "EABatch", label: "EABatch\n0011206\nbr.com.rtkomp", color: colorGlassfish },
+  { id: "FCCargoAtendRMI", label: "FCCargoAtendRMI\n0010204\nbr.com.rtkomp", color: colorSocketRmi },
+  { id: "ICFBMODRMI", label: "ICFBMODRMI\n0010503\nbr.com.rtkomp", color: colorSocketRmi },
+  { id: "ICFBusiness", label: "ICFBusiness\n0011049\nbr.com.rtkomp", color: colorSocketRmi },
+  { id: "ICFBusinessRMIServer", label: "ICFBusinessRMIServer\n0010603\nbr.com.rtkomp", color: colorSocketRmi },
+  { id: "IPOSBMOD003", label: "IPOSBMOD003\n0010506\nbr.com.rtkomp", color: colorSocketRmi },
+  { id: "InterfaceOracle", label: "InterfaceOracle\n0010402\nbr.com.rtkomp", color: colorDependencies },
+  { id: "InterfaceXML", label: "InterfaceXML\n00101000\nbr.com.rtkomp", color: colorDependencies },
+  { id: "POSBrowserTP", label: "POSBrowserTP\n0011107\nbr.com.rtkomp", color: colorGlassfish },
+  { id: "POSBrowserWeb", label: "POSBrowserWeb\n0011106\nbr.com.rtkomp", color: colorGlassfish },
+  { id: "RMIAutorizationBCT", label: "RMIAutorizationBCT\n0011231\nbr.com.rtkomp", color: colorSocketRmi },
+  { id: "ServerPefAntt", label: "ServerPefAntt\n0010501\nbr.com.rtkomp", color: colorSocketRmi },
   { id: "Util", label: "Util\n2.1.0", color: colorDependencies },
   { id: "UtilANTT", label: "UtilANTT", color: colorDependencies },
-  { id: "UtilBoleto", label: "UtilBoleto\n0010103", color: colorDependencies },
-  { id: "WSAntt", label: "WSAntt\n0011003", color: colorDependencies },
-  {
-    id: "WSFCUNIKCAD",
-    label: "WSFCUNIKCAD\n0010103",
-    color: colorDependencies
-  },
-  { id: "WSFretePortal", label: "WSFretePortal\n0011666", color: colorTomcat },
-  { id: "WSFrete_Unik", label: "WSFrete_Unik\n0010804", color: colorTomcat },
-  {
-    id: "WebExtratoTransporte",
-    label: "WebExtratoTransporte",
-    color: colorGlassfish
-  },
-  { id: "WebLoginPef", label: "WebLoginPef", color: colorGlassfish },
-  { id: "WebPef", label: "WebPef", color: colorGlassfish },
+  { id: "UtilBoleto", label: "UtilBoleto\n0010101\nbr.com.rtkomp", color: colorDependencies },
+  { id: "WSAntt", label: "WSAntt\n0011116\nbr.com.rtkomp", color: colorDependencies },
+  { id: "WSFCUNIKCAD", label: "WSFCUNIKCAD\n000010103\nbr.com.rtkomp", color: colorDependencies },
+  { id: "WSFretePortal", label: "WSFretePortal\n0012012\nbr.com.rtkomp", color: colorTomcat },
+  { id: "WSFrete_Unik", label: "WSFrete_Unik\n0011116\nbr.com.rtkomp", color: colorTomcat },
+  { id: "WebExtratoTransporte", label: "WebExtratoTransporte\n0010401\nbr.com.rtkomp", color: colorGlassfish },
+  { id: "WebLoginPef", label: "WebLoginPef\n0010302\nbr.com.rtkomp", color: colorGlassfish },
+  { id: "WebPef", label: "WebPef\nbr.com.rtkomp", color: colorGlassfish },
   { id: "WebProxyClient", label: "WebProxyClient", color: colorUndefined },
   { id: "FretePortalCli", label: "FretePortal-CLI", color: colorUndefined },
   { id: "ArarasCli", label: "Araras-CLI", color: colorUndefined },
-  { id: "WSPedagio", label: "WSPedagio", color: colorTomcat },
-  { id: "Valepedagio", label: "Valepedagio", color: colorDependencies },
-  { id: "WSPedagioPortal", label: "WSPedagioPortal", color: colorTomcat }
+  { id: "WSPedagio", label: "WSPedagio\n0010705\nbr.com.unik", color: colorTomcat },
+  { id: "Valepedagio", label: "Valepedagio\n0011910\nbr.com.unik", color: colorDependencies },
+  { id: "WSPedagioPortal", label: "WSPedagioPortal\n0010704\nbr.com.unik", color: colorTomcat }
 ];
 let relacionamentos = [
   { from: "APPGUIMENU", to: "EAAtendimento", label: "" },

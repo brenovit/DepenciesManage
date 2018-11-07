@@ -17,10 +17,10 @@ let options = {
     size: 50,
     labelHighlightBold: true,
     widthConstraint: {
-      minimum: 350
+      minimum: 400
     },
     heightConstraint: {
-      minimum: 100,
+      minimum: 150,
       valign: "center"
     }
   },
