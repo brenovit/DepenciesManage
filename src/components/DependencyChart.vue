@@ -1,5 +1,4 @@
 <template>
-    <div class="wrapper">
         <network 
             class="network"
             ref="network"
@@ -7,7 +6,6 @@
             :edges="network.edges"
             :options="network.options"
         />
-    </div>
 </template>
 
 <script>
@@ -354,7 +352,7 @@ export default {
             }
           },
           physics: {
-            enabled: true,
+            enabled: false,
             hierarchicalRepulsion: {
               nodeDistance: 300
             }
@@ -363,7 +361,7 @@ export default {
             hierarchical: {
               enabled: true,
               levelSeparation: 500,
-              nodeSpacing: 50,
+              nodeSpacing: 500,
               treeSpacing: 50,
               direction: "LR", // UD, DU, LR, RL
               sortMethod: "hubsize" // hubsize, directed
@@ -396,7 +394,7 @@ export default {
               strokeColor: "#000000"
             },
             hoverWidth: 1.1
-          },
+          },   
           interaction: {
             dragNodes: true,
             dragView: true,
@@ -430,5 +428,6 @@ export default {
 @import "../../node_modules/vue2vis/dist/vue2vis.css";
 .network {
   border: 2px solid lightgray;
+  height: 800px;
 }
 </style>
