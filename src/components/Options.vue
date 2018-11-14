@@ -1,5 +1,4 @@
-<template>
-    <div>Sou o Options</div>
+<template>    
 </template>
 
 <script>

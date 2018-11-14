@@ -1,8 +1,4 @@
 <template>
-<div>
-    <div>Sou o Colors</div>
-    <div>{{colorTomcat}}</div>
-</div>
 </template>
 
 <script>

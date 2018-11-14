@@ -1,16 +1,13 @@
 <template>
   <div>
     <Subtitle />
-    <Applications />
-    <Options />
-    <Relations />    
-    <!--<network 
+    <network 
         class="network"
         ref="network"
         :nodes="network.nodes"
         :edges="network.edges"
         :options="network.options"
-    />-->
+    />
   </div>
 </template>
 
@@ -26,9 +23,9 @@ export default {
   data: function() {
     return {      
       network: {        
-        nodes:{},
-        edges:{},
-        options:{}
+        nodes:Applications.data().nodes,
+        edges:Relations.data().edges,
+        options:Options.data().options
       }
     }
   },

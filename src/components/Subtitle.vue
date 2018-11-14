@@ -1,94 +1,81 @@
 <template>
     <div class="subtitle">
         <h3>Subtitle</h3>
-        <ul>
-            <li class="tomcat">Tomcat</li>
-            <li class="glassfish">GlassFish</li>
-            <li class="socketrmi">Socket/RMI</li>
-            <li class="desktop">Desktop</li>
-            <li class="dependencie">Dependência</li>
-            <li class="undefined">Indefinido</li>
-        </ul>
+        <div class="menu">
+            <HideApps name="Tomcat" typeAppName="tomcat" className="tomcat"/> 
+            <HideApps name="GlassFish" typeAppName="glassfish" className="glassfish"/>
+            <HideApps name="Socket/RMI" typeAppName="socketrmi" className="socketrmi"/>
+            <HideApps name="Dependency" typeAppName="dependency" className="dependency"/>
+            <HideApps name="Desktop" typeAppName="desktop" className="desktop"/>
+            <HideApps name="Indefinido" typeAppName="undefined" className="undefined"/>
+        </div>
     </div>
 </template>
 
 <script>
+import HideApps from './HideApps.vue'
+
 export default {
-    name: 'Subtitle'
+    name: 'Subtitle',   
+    components: {
+        HideApps
+    }
 }
 </script>
 
 <style>
-li {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;    
-    padding: 10px;
-    display: inline;
-    overflow: hidden;
-    border: none;
-    font: normal normal bold 19px/1 "Courier New", Courier, monospace;
-    color: rgba(0,0,0,1);
-    text-align: center;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    border-radius: 15px;
-    -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3);
-    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3);
-  }
-
-li.tomcat{
+button.tomcat{
     background: #FF9800;
 }
-li.tomcat:hover{
+button.tomcat:hover{
     background: #F57C00;
 }
-li.tomcat:active{
+button.tomcat:active{
     background: #E65100;
 }
-li.glassfish{
+button.glassfish{
     background: #03A9F4;
 } 
-li.glassfish:hover{
+button.glassfish:hover{
     background: #0288D1;
 }
-li.glassfish:active{
+button.glassfish:active{
     background: #01579B;
 }
-li.socketrmi{
+button.socketrmi{
     background: #f44336;
 }
-li.socketrmi:hover{
+button.socketrmi:hover{
     background: #d32f2f;
 }
-li.socketrmi:active{
+button.socketrmi:active{
     background: #b71c1c;
 }
-li.desktop{
+button.desktop{
     background: #8BC34A;
 }
-li.desktop:hover{
+button.desktop:hover{
     background: #689F38;
 }
-li.desktop:active{
+button.desktop:active{
     background: #33691E;
 }
-li.dependencie{
+button.dependency{
     background: #607D8B;
 } 
-li.dependencie:hover{
+button.dependency:hover{
     background: #455A64;
 }
-li.dependencie:active{
+button.dependency:active{
     background: #263238;
 }
-li.undefined{
+button.undefined{
     background: #BDBDBD;
 } 
-li.undefined:hover{
+button.undefined:hover{
     background: #9E9E9E;
 }
-li.undefined:active{
+button.undefined:active{
     background: #757575;
 }
 </style>
