@@ -1,6 +1,3 @@
-<template>    
-</template>
-
 <script>
 export default {
     name: "Options",
@@ -9,7 +6,7 @@ export default {
             options: {
                 configure: {
                     enabled: false,
-                    showButton: true
+                    showButton: false
                 },
                 nodes: {
                     shape: "box",
@@ -84,12 +81,12 @@ export default {
                     hover: true,
                     hoverConnectedEdges: true,
                     keyboard: {
-                        enabled: true,
+                        enabled: false,
                         speed: { x: 10, y: 10, zoom: 0.02 },
                         bindToWindow: true
                     },
                     multiselect: true,
-                    navigationButtons: true,
+                    navigationButtons: false,
                     selectable: true,
                     selectConnectedEdges: true,
                     tooltipDelay: 300,
