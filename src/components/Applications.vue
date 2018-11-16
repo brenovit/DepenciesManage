@@ -1,6 +1,3 @@
-<template>
-</template>
-
 <script>
 import Colors from './Colors.vue';
 

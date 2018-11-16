@@ -15,7 +15,7 @@ export default {
         hideApp: function(){
             var typeName = this.$props.typeAppName;
             var nodes = Applications.data().nodes;
-            console.log(nodes[0].type);
+            //console.log(nodes[0].type);
             var node = nodes[0];
             node.type = typeName;
             nodes[0] = node;
