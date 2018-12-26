@@ -142,6 +142,12 @@ export default {
             type: "tomcat"
           },
           {
+            id: "AutorizadorCargaDescarga",
+            label: "br.com.cargadescarga\nAutorizadorCargaDescarga\n0010301",
+            color: Colors.data().colorTomcat,
+            type: "tomcat"
+          },
+          {
             id: "WSFrete_Unik",
             label: "br.com.rtkomp\nWSFrete_Unik\n0011116",
             color: Colors.data().colorTomcat,

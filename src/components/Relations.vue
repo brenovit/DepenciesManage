@@ -84,7 +84,8 @@ export default {
           { from: "WSPedagioPortal", to: "Valepedagio", label: "0011910" },
           { from: "WSPedagioPortal", to: "ACID", label: "1.0.6" },
           { from: "Valepedagio", to: "ACID", label: "1.0.6" },
-          { from: "Valepedagio", to: "WSFretePortal", label: "" }
+          { from: "Valepedagio", to: "WSFretePortal", label: "" },
+          { from: "AutorizadorCargaDescarga", to: "Valepedagio", label: "" },
         ],
         }
     }
