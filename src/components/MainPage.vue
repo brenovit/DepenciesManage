@@ -1,28 +1,26 @@
 <template>
-    <div> 
-        <header>
-            <h2>Dependencies Manager</h2>
-            
-        </header>
-        <div class="menu">
-            <!-- a href="edit.html">Edit Apps</a -->
-            <!-- a href="edit.html">Edit Apps</a -->
-        </div>
-        <Map />
+  <div>
+    <header>
+      <h2>Dependencies Manager</h2>
+    </header>
+    <div class="menu">
+      <!-- a href="edit.html">Edit Apps</a -->
+      <!-- a href="edit.html">Edit Apps</a -->
     </div>
+    <Map/>
+  </div>
 </template>
 
 <script>
-import Map from './Map.vue'
+import Map from "./Map.vue";
 
 export default {
-    name: 'MainPage',
-    components:{
-        Map
-    }
-}
+  name: "MainPage",
+  components: {
+    Map
+  }
+};
 </script>
 
 <style>
-
 </style>

@@ -1,13 +1,15 @@
 <script>
-import Colors from './Colors.vue';
+import Colors from "./Colors.vue";
 
 export default {
-    name: 'Applications',
-    components: {
-      Colors
-    },
-    data: function() {
-      return {
+  name: "Applications",
+  components: {
+    Colors
+  },
+  data: function(versao) {
+    var objeto = {};
+    if (versao === 1) {
+      objeto = {
         nodes: [
           {
             id: "ACID",
@@ -177,10 +179,10 @@ export default {
             color: Colors.data().colorUndefined,
             type: "undefined"
           },
-          { 
-            id: "ArarasCli", 
-            label: "Araras-CLI", 
-            color: Colors.data().colorUndefined ,
+          {
+            id: "ArarasCli",
+            label: "Araras-CLI",
+            color: Colors.data().colorUndefined,
             type: "undefined"
           },
           {
@@ -206,15 +208,12 @@ export default {
             label: "br.com.unik\nWSPedagioPortal\n0010704",
             color: Colors.data().colorTomcat,
             type: "tomcat"
-          },
-        ],
-        nodesBase: [
-          {
-            id: "ACID",
-            label: "br.com.unik\nACID\n1.0.7",
-            color: Colors.data().colorDependencies,
-            type: "undefined"
-          },
+          }
+        ]
+      };
+    } else if (versao === 2) {
+      objeto = {
+        nodes: [
           {
             id: "APPGUIMENU",
             label: "br.com.rtkomp\nAPPGUIMENU\n0010807",
@@ -234,32 +233,14 @@ export default {
             type: "glassfish"
           },
           {
-            id: "EABatch",
-            label: "br.com.rtkomp\nEABatch\n0011206",
+            id: "WexBatch",
+            label: "br.com.wexinc\nWexBatch\n0011206",
             color: Colors.data().colorGlassfish,
             type: "glassfish"
           },
           {
-            id: "FCCargoAtendRMI",
-            label: "br.com.rtkomp\nFCCargoAtendRMI\n0010204",
-            color: Colors.data().colorSocketRmi,
-            type: "socketrmi"
-          },
-          {
             id: "ICFBMODRMI",
             label: "br.com.rtkomp\nICFBMODRMI\n0010503",
-            color: Colors.data().colorSocketRmi,
-            type: "socketrmi"
-          },
-          {
-            id: "ICFBusiness",
-            label: "br.com.rtkomp\nICFBusiness\n0011049",
-            color: Colors.data().colorSocketRmi,
-            type: "socketrmi"
-          },
-          {
-            id: "ICFBusinessRMIServer",
-            label: "br.com.rtkomp\nICFBusinessRMIServer\n0010603",
             color: Colors.data().colorSocketRmi,
             type: "socketrmi"
           },
@@ -282,22 +263,16 @@ export default {
             type: "dependency"
           },
           {
-            id: "POSBrowserTP",
-            label: "br.com.rtkomp\nPOSBrowserTP\n0011107",
-            color: Colors.data().colorGlassfish,
-            type: "glassfish"
-          },
-          {
             id: "POSBrowserWeb",
             label: "br.com.rtkomp\nPOSBrowserWeb\n0011106",
             color: Colors.data().colorGlassfish,
             type: "glassfish"
           },
           {
-            id: "RMIAutorizationBCT",
-            label: "br.com.rtkomp\nRMIAutorizationBCT\n0011231",
-            color: Colors.data().colorSocketRmi,
-            type: "socketrmi"
+            id: "FreteBusiness",
+            label: "br.com.wexinc\nFreteBusiness\n0011231",
+            color: Colors.data().colorDependencies,
+            type: "dependency"
           },
           {
             id: "ServerPefAntt",
@@ -306,8 +281,8 @@ export default {
             type: "socketrmi"
           },
           {
-            id: "Util",
-            label: "br.com.rtkomp\nUtil\n0011002",
+            id: "UtilFrete",
+            label: "br.com.wexinc\nUtilFrete\n0011002",
             color: Colors.data().colorDependencies,
             type: "dependency"
           },
@@ -342,6 +317,12 @@ export default {
             type: "tomcat"
           },
           {
+            id: "AutorizadorCargaDescarga",
+            label: "br.com.cargadescarga\nAutorizadorCargaDescarga\n0010301",
+            color: Colors.data().colorTomcat,
+            type: "tomcat"
+          },
+          {
             id: "WSFrete_Unik",
             label: "br.com.rtkomp\nWSFrete_Unik\n0011116",
             color: Colors.data().colorTomcat,
@@ -371,10 +352,10 @@ export default {
             color: Colors.data().colorUndefined,
             type: "undefined"
           },
-          { 
-            id: "ArarasCli", 
-            label: "Araras-CLI", 
-            color: Colors.data().colorUndefined ,
+          {
+            id: "ArarasCli",
+            label: "Araras-CLI",
+            color: Colors.data().colorUndefined,
             type: "undefined"
           },
           {
@@ -400,13 +381,14 @@ export default {
             label: "br.com.unik\nWSPedagioPortal\n0010704",
             color: Colors.data().colorTomcat,
             type: "tomcat"
-          },
+          }
         ]
+      };
     }
-    },
-}
+    return objeto;
+  }
+};
 </script>
 
 <style>
-
 </style>
