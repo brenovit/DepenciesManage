@@ -1,0 +1,184 @@
+<template>
+  <div>Sou o Relations</div>
+</template>
+
+<script>
+export default {
+  name: "Relations",
+  data: function(versao) {
+    var objeto = {};
+    if (versao === 1) {
+      objeto = {
+        edges: [
+          { from: "APPGUIMENU", to: "EAAtendimento", label: "0010102" },
+          { from: "APPGUIMENU", to: "FCCargoAtendRMI", label: "0010203" },
+          { from: "APPGUIMENU", to: "Util", label: "0011001" },
+          { from: "APPGUIMENU", to: "WSFCUNIKCAD", label: "0010102" },
+          { from: "APPWEBFACES", to: "WSFretePortal", label: "FretePortalCli" },
+          { from: "APPWEBFACES", to: "ArarasCli", label: "0010101" },
+          { from: "EABatch", to: "Util", label: "0011002" },
+          { from: "EABatch", to: "UtilBoleto", label: "0010101" },
+          { from: "EABatch", to: "InterfaceOracle", label: "0010403" },
+          { from: "EABatch", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "EABatch", to: "WebProxyClient", label: "0040307" },
+          { from: "EABatch", to: "InterfaceXML", label: "0010100" },
+          { from: "EABatch", to: "WSPedagio", label: "pedagiounik-cli.jar" },
+          {
+            from: "EABatch",
+            to: "WSFrete_Unik",
+            label: "stubs-wsfreteunik.jar"
+          },
+          { from: "EAAtendimento", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "EAAtendimento", to: "Util", label: "001102" },
+          { from: "EAAtendimento", to: "WebProxy.jar", label: "" },
+          { from: "FCCargoAtendRMI", to: "EAAtendimento", label: "0010808" },
+          { from: "FCCargoAtendRMI", to: "InterfaceOracle", label: "0010403" },
+          { from: "FCCargoAtendRMI", to: "Util", label: "0011002" },
+          { from: "FCCargoAtendRMI", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "ICFBMODRMI", to: "ICFBusinessRMIServer", label: "0010603" },
+          { from: "ICFBMODRMI", to: "Util", label: "0010101" },
+          { from: "ICFBMODRMI", to: "UtilANTT", label: "0010102" },
+          { from: "ICFBMODRMI", to: "UtilBoleto", label: "0010101" },
+          { from: "ICFBMODRMI", to: "WSAntt", label: "0011014" },
+          { from: "ICFBusiness", to: "ACID", label: "1.0.6" },
+          { from: "ICFBusiness", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "ICFBusiness", to: "RMIAutorizationBCT", label: "0011231" },
+          { from: "ICFBusinessRMIServer", to: "WSFCUNIKCAD", label: "0010103" },
+          {
+            from: "ICFBusinessRMIServer",
+            to: "WebProxyClient",
+            label: "0040307"
+          },
+          { from: "IPOSBMOD003", to: "RMIAutorizationBCT", label: "0011231" },
+          { from: "InterfaceOracle", to: "WebProxyClient", label: "0040307" },
+          { from: "InterfaceOracle", to: "Util", label: "0010101" },
+          { from: "InterfaceXML", to: "Util", label: "0011002" },
+          { from: "POSBrowserTP", to: "InterfaceOracle", label: "0010402" },
+          { from: "POSBrowserTP", to: "RMIAutorizationBCT", label: "0011231" },
+          { from: "POSBrowserTP", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "POSBrowserTP", to: "WebProxyClient", label: "0040307" },
+          { from: "POSBrowserWeb", to: "InterfaceOracle", label: "0010402" },
+          { from: "POSBrowserWeb", to: "RMIAutorizationBCT", label: "0011231" },
+          { from: "POSBrowserWeb", to: "Util", label: "0011002" },
+          { from: "POSBrowserWeb", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "POSBrowserWeb", to: "WebProxyClient", label: "0040307" },
+          { from: "RMIAutorizationBCT", to: "Util", label: "0011002" },
+          { from: "RMIAutorizationBCT", to: "WSFCUNIKCAD]", label: "0010103" },
+          {
+            from: "RMIAutorizationBCT",
+            to: "InterfaceOracle",
+            label: "000402"
+          },
+          {
+            from: "RMIAutorizationBCT",
+            to: "WebProxyClient",
+            label: "0040307"
+          },
+          { from: "ServerPefAntt", to: "UtilANTT", label: "0010102" },
+          { from: "ServerPefAntt", to: "WSAntt", label: "0011201" },
+          { from: "WSAntt", to: "UtilANTT", label: "0010102" },
+          { from: "WSFCUNIKCAD", to: "WebProxyClient", label: "0040307" },
+          { from: "WSFretePortal", to: "ACID", label: "1.0.6" },
+          { from: "WSFretePortal", to: "ICFBusiness", label: "0011049" },
+          { from: "WSFretePortal", to: "UtilANTT", label: "0010102" },
+          { from: "WSFretePortal", to: "UtilBoleto", label: "0010101" },
+          { from: "WSFretePortal", to: "WSAntt", label: "0011116" },
+          { from: "WSFretePortal", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "WSFretePortal", to: "WebProxyClient", label: "0040307" },
+          { from: "WSFrete_Unik", to: "ACID", label: "1.0.6" },
+          { from: "WSFrete_Unik", to: "ICFBusiness", label: "0011049" },
+          { from: "WSFrete_Unik", to: "RMIAutorizationBCT", label: "0011231" },
+          { from: "WSFrete_Unik", to: "UtilANTT", label: "0011002" },
+          { from: "WSFrete_Unik", to: "WSAntt", label: "0011116" },
+          { from: "WSFrete_Unik", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "WebExtratoTransporte", to: "Util", label: "0010101" },
+          { from: "WebExtratoTransporte", to: "WSAntt", label: "0010101" },
+          { from: "WebLoginPef", to: "Util", label: "0010101" },
+          { from: "WebPef", to: "Util", label: "0010101" },
+          { from: "WebPef", to: "UtilANTT", label: "0010101" },
+          { from: "WebPef", to: "WSAntt", label: "0011000" },
+          { from: "WSPedagio", to: "Valepedagio", label: "0011910" },
+          { from: "WSPedagio", to: "ACID", label: "1.0.6" },
+          { from: "WSPedagioPortal", to: "Valepedagio", label: "0011910" },
+          { from: "WSPedagioPortal", to: "ACID", label: "1.0.6" },
+          { from: "Valepedagio", to: "ACID", label: "1.0.6" },
+          { from: "Valepedagio", to: "WSFretePortal", label: "" },
+          { from: "AutorizadorCargaDescarga", to: "Valepedagio", label: "" }
+        ]
+      };
+    } else if (versao === 2) {
+      objeto = {
+        edges: [
+          { from: "APPGUIMENU", to: "EAAtendimento", label: "0010102" },
+          { from: "APPGUIMENU", to: "UtilFrete", label: "0011001" },
+          { from: "APPGUIMENU", to: "WSFCUNIKCAD", label: "0010102" },
+          { from: "APPWEBFACES", to: "WSFretePortal", label: "FretePortalCli" },
+          { from: "APPWEBFACES", to: "UtilFrete", label: "0010101" },
+          { from: "APPWEBFACES", to: "ArarasCli", label: "0010101" },
+          { from: "WexBatch", to: "UtilFrete", label: "0011002" },
+          { from: "WexBatch", to: "UtilBoleto", label: "0010101" },
+          { from: "WexBatch", to: "InterfaceOracle", label: "0010403" },
+          { from: "WexBatch", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "WexBatch", to: "WebProxyClient", label: "0040307" },
+          { from: "WexBatch", to: "InterfaceXML", label: "0010100" },
+          { from: "WexBatch", to: "WSPedagio", label: "pedagiounik-cli.jar" },
+          {
+            from: "WexBatch",
+            to: "WSFrete_Unik",
+            label: "stubs-wsfreteunik.jar"
+          },
+          { from: "EAAtendimento", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "EAAtendimento", to: "UtilFrete", label: "001102" },
+          { from: "EAAtendimento", to: "WebProxy.jar", label: "" },
+          { from: "ICFBMODRMI", to: "UtilFrete", label: "0010101" },
+          { from: "ICFBMODRMI", to: "UtilANTT", label: "0010102" },
+          { from: "ICFBMODRMI", to: "UtilBoleto", label: "0010101" },
+          { from: "ICFBMODRMI", to: "WSAntt", label: "0011014" },
+          { from: "IPOSBMOD003", to: "FreteBusiness", label: "0011231" },
+          { from: "IPOSBMOD003", to: "RMIAutorizationBCT", label: "0011231" },
+          { from: "InterfaceOracle", to: "WebProxyClient", label: "0040307" },
+          { from: "InterfaceOracle", to: "UtilFrete", label: "0010101" },
+          { from: "InterfaceXML", to: "UtilFrete", label: "0011002" },
+          { from: "POSBrowserWeb", to: "InterfaceOracle", label: "0010402" },
+          { from: "POSBrowserWeb", to: "FreteBusiness", label: "0011231" },
+          { from: "POSBrowserWeb", to: "UtilFrete", label: "0011002" },
+          { from: "POSBrowserWeb", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "POSBrowserWeb", to: "WebProxyClient", label: "0040307" },
+          { from: "ServerPefAntt", to: "UtilANTT", label: "0010102" },
+          { from: "ServerPefAntt", to: "WSAntt", label: "0011201" },
+          { from: "WSAntt", to: "UtilFrete", label: "0010102" },
+          { from: "WSAntt", to: "UtilANTT", label: "0010102" },
+          { from: "WSFCUNIKCAD", to: "WebProxyClient", label: "0040307" },
+          { from: "WSFretePortal", to: "FreteBusiness", label: "0011049" },
+          { from: "WSFretePortal", to: "UtilFrete", label: "0010102" },
+          { from: "WSFretePortal", to: "UtilBoleto", label: "0010101" },
+          { from: "WSFretePortal", to: "WSAntt", label: "0011116" },
+          { from: "WSFretePortal", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "WSFretePortal", to: "WebProxyClient", label: "0040307" },
+          { from: "WSFrete_Unik", to: "FreteBusiness", label: "0011231" },
+          { from: "WSFrete_Unik", to: "UtilFrete", label: "0011002" },
+          { from: "WSFrete_Unik", to: "WSAntt", label: "0011116" },
+          { from: "WSFrete_Unik", to: "WSFCUNIKCAD", label: "0010103" },
+          { from: "WebExtratoTransporte", to: "UtilFrete", label: "0010101" },
+          { from: "WebExtratoTransporte", to: "WSAntt", label: "0010101" },
+          { from: "WebLoginPef", to: "UtilFrete", label: "0010101" },
+          { from: "WebPef", to: "UtilFrete", label: "0010101" },
+          { from: "WebPef", to: "UtilANTT", label: "0010101" },
+          { from: "WebPef", to: "WSAntt", label: "0011000" },
+          { from: "WSPedagio", to: "Valepedagio", label: "0011910" },
+          { from: "WSPedagio", to: "UtilFrete", label: "1.0.6" },
+          { from: "WSPedagioPortal", to: "Valepedagio", label: "0011910" },
+          { from: "WSPedagioPortal", to: "UtilFrete", label: "1.0.6" },
+          { from: "Valepedagio", to: "UtilFrete", label: "1.0.6" },
+          { from: "Valepedagio", to: "WSFretePortal", label: "" },
+          { from: "AutorizadorCargaDescarga", to: "Valepedagio", label: "" }
+        ]
+      };
+    }
+    return objeto;
+  }
+};
+</script>
+
+<style>
+</style>
